@@ -20,7 +20,7 @@ When installed, the following hotkeys will be active:
 - type `control mmsys.cpl sounds`
 (or Control Panel -> Hardware and Sound -> Sound)
 Then if they are not exactly named "Headphones", "Speakers" and "Monitor": rename your desired headphones and speakers devices by right-clicking them and then clicking 'Properties' Note that you could of course also rename the names for the devices in the code. 
-5. In order for this to work also after you restart your PC - which you definitely do! :) - do the following:
+6. In order for this to work also after you restart your PC - which you definitely do! :) - do the following:
 - Create shortcut of the .ahk file
 - Move the shortcut to Windows' startup folder (to get there: in+R -> type `shell:startup`, Enter)
 
