@@ -21,7 +21,7 @@ ChangeAudioOutput(device, show_msg_box:=true)
                 "T0.3"
                 )
         }
-    Run("C:\Users\max59\OneDrive\Downloads\Installers\NirCMD\nircmd-x64\nircmd.exe setdefaultsounddevice " device)  ; change device using nircmd
+    Run("C:\Users\path\to\nircmd-x64\nircmd.exe setdefaultsounddevice " device)  ; change device using nircmd
 }
 
 ; set Headphones as default device for startup
