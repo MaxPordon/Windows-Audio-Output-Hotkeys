@@ -1,0 +1,86 @@
+#Requires AutoHotkey v2.0
+; ======================================================================================================================
+; Everything until the first `return` autoruns
+
+; ======================================================================================================================
+; Function definition. Changes Audio Output Device to `device`
+; ======================================================================================================================
+ChangeAudioOutput(device, show_msg_box:=true)
+{
+    symbols := Map("Headphones", "🎧", "Speakers", "🔊", "Wired", "🎧", "Display", "🖥️", "Unknown", "❔")  ; Python dict-like object, callable by `Val := Array[Key]`
+    if (show_msg_box)
+        symbol := symbols[device]
+        {
+            ; Show a message box
+            MsgBox(
+                ; MsgBox's message in the box
+                "Selected device: " symbols[device] device,
+                ; MsgBox's title/heading
+                "Audio Output Device changed",  
+                ; time after which the MsgBox will close
+                "T0.3"
+                )
+        }
+    Run("C:\Users\max59\OneDrive\Downloads\Installers\NirCMD\nircmd-x64\nircmd.exe setdefaultsounddevice " device)  ; change device using nircmd
+}
+
+; set Headphones as default device for startup
+ChangeAudioOutput("Headphones", false)  ; false -> don't show message box at startup
+return  ; Everything above this `return` autoruns
+; ======================================================================================================================
+
+
+
+; ======================================================================================================================
+; Audio Output Device Switch to Headphones/Speakers/Monitor
+; ======================================================================================================================
+; Audio Output Device Switch to 🎧Headphones
+#F1::  ; Windows key + F1
+{
+    ChangeAudioOutput("Headphones")
+}
+
+; Audio Output Device Switch to 🔊Speakers
+#F2::  ; Windows key + F2
+{
+    ChangeAudioOutput("Speakers")
+}
+
+; Audio Output Device Switch to 🎧Wired (Headphones)
+#F3::  ; Windows key + F3
+{
+    ChangeAudioOutput("Wired")
+}
+
+; Audio Output Device Switch to Display/Monitor
+#F4::  ; Windows key + F3
+{
+    ChangeAudioOutput("Monitor")
+}
+
+; ; ======================================================================================================================
+; ; Audio Output Device Toggle Headphones/Speakers
+; ; ======================================================================================================================
+; #a::
+; {
+;     static device := "Headphones"  ; use a static variable
+
+;     if (device = "Headphones")
+;         {
+;             device := "Speakers"
+;         }
+        
+;     else if (device = "Speakers")
+;         {
+;             device := "Headphones"
+;         }
+
+;     ; catch if output is anything else than headphones/speakers
+;     else if not (device := "Headphones" or device := "Speakers")
+;         {
+;             device := "Headphones"
+;         }
+    
+;     ; change device using nircmd
+;     ChangeAudioOutput(device, true)
+; }
