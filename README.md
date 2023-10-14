@@ -6,11 +6,16 @@ When installed:
 - Win+F2: 🔊Speakers
 - Win+F3: 🎧Headphones (wired)
 
+# Dependencies
+- [AutoHotKey](autohotkey.com) v2
+- [nircmd](https://www.nirsoft.net/utils/nircmd.html)
+
 # Installation
 1. If you haven't already, download AutoHotKey version 2 from [here (exe)](https://www.autohotkey.com/download/ahk-v2.exe) or [here (zip)](https://www.autohotkey.com/download/ahk-v2.zip).
 2. Download and install NirCmd from [here (x64)](https://www.nirsoft.net/utils/nircmd-x64.zip) or [here](https://www.nirsoft.net/utils/nircmd.zip). **Copy the path to nircmd.exe.**
-3. Download [the .ahk file](https://github.com/MaxPordon/Windows-Audio-Output-Hotkeys/blob/main/AHK_v2_Set_Audio_Output), and make sure that in the code at line 21 **you change `C:\your\path\to\nircmd.exe` to where you installed nircmd.exe**.
-4. Make sure your desired audio devices are called exactly "Headphones" and "Speakers" in the Sound Control Panel. To get there:
+3. Download [the .ahk file](https://github.com/MaxPordon/Windows-Audio-Output-Hotkeys/blob/main/AHK_v2_Set_Audio_Output)
+4. **Make sure that in the code at line 21 **you change `C:\your\path\to\nircmd.exe` to where you installed nircmd.exe**.
+5. Make sure your desired audio devices are called exactly "Headphones" and "Speakers" in the Sound Control Panel. To get there:
 - Win + R
 - type `control mmsys.cpl sounds`
 (or Control Panel -> Hardware and Sound -> Sound)
