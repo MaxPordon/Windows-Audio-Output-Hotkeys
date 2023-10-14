@@ -7,7 +7,7 @@ When installed:
 - Win+F3: 🎧Headphones (wired)
 
 # Dependencies
-- [AutoHotKey](autohotkey.com) v2
+- [AutoHotKey](https://www.autohotkey.com) v2
 - [nircmd](https://www.nirsoft.net/utils/nircmd.html)
 
 # Installation
