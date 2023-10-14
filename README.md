@@ -1,7 +1,7 @@
 # Windows-Audio-Output-Hotkeys
 Set of hotkeys that allows easy switching between audio outputs.
 
-When installed:
+When installed, the following hotkeys will be active:
 - Win+F1: 🎧Headphones (wireless)
 - Win+F2: 🔊Speakers
 - Win+F3: 🎧Headphones (wired)
